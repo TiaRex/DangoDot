@@ -1,0 +1,21 @@
+{
+  "detectedConfig": {
+    "typescript": false,
+    "naming": "Kebab Case",
+    "unit": "px",
+    "framework": "html-css",
+    "styling": "CSS Modules"
+  },
+  "locofyConfig": {
+    "project": "DangoDot Landing Page",
+    "id": "66731b4de90276ffecb08af8",
+    "framework": "html-css",
+    "typescript": false,
+    "styling": "CSS",
+    "unit": "rem",
+    "naming": "Pascal Case",
+    "path": "public/",
+    "componentsPath": "c:\\Users\\eliza\\OneDrive\\Documents\\GitHub\\DangoDot\\src\\components",
+    "screensPath": "c:\\Users\\eliza\\OneDrive\\Documents\\GitHub\\DangoDot\\src\\pages"
+  }
+}
