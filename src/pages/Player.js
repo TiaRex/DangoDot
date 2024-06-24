@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 
-const Settings = () => {
+const Player = () => {
   return (
     <div>
         <Navbar />
-        <h1>Settings</h1>
+        <h1>Video Player</h1>
     </div>
   )
 }
 
-export default Settings
+export default Player
