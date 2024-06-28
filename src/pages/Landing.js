@@ -1,31 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-// add import css folder here
+import "../styles/Landing.css"
 // copy and past html code within return
+
 const Landing = () => {
   return (
-    <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-<!-- Links to the CSS pages to update stylings -->
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-<!-- Links to font type - currently using Inter (default font from Figma) -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    />
-<!-- DangoDot Webpage Title -->
-    <title>DangoDot</title>
-<!-- DangoDot Favicon-->
-    <link rel="icon" type="image/x-icon" href="./public/DangoFavicon.ico">
-
-  </head>
-  
-  <!-- Main body of the homepage including the navigation header -->
-  <body>
+  <>
+  <Navbar></Navbar>
     <div class="landing-page-liz">
       <header class="navigationheader">
         <div class="dangodotlogobox-parent">
@@ -253,8 +234,8 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      
-      <!-- Navigation footer section -->
+
+      {/* // <!-- Navigation footer section --> */}
       <footer class="navigation-footer">
         <div class="divider"></div>
         <div class="footer-content">
@@ -326,17 +307,7 @@ const Landing = () => {
         </div>
       </footer>
     </div>
-
-    <script>
-      var logInSignUpButton = document.getElementById("logInSignUpButton");
-      if (logInSignUpButton) {
-        logInSignUpButton.addEventListener("click", function (e) {
-          //TODO: Add link to login/sign-in page
-        });
-      }
-      </script>
-  </body>
-</html>
-}
+      </>
+)}
 
 export default Landing
