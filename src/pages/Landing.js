@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import "../styles/Landing.css"
 import LandingPic1 from "../assets/landingpagepic1@2x.png"
 // copy and past html code within return
+// Update pictures by adding import and update link on img
 
 const Landing = () => {
   return (
