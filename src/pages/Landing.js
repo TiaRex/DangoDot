@@ -1,10 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import "../styles/Landing.css"
-import LandingPic1 from "../assets/landingpagepic1@2x.png"
-// copy and past html code within return
-// Update pictures by adding import and update link on img
 
+// picture/images imports here
+// Update pictures by adding import and update src link under img
+import DangoDotLogo from "../assets/dangologo@2x.png"
+import LandingPic1 from "../assets/landingpagepic1@2x.png"
+import LandingPic2 from "../assets/landingpagepic2@2x.png"
+
+// copy and past html code within return
 const Landing = () => {
   return (
   <>
@@ -18,7 +22,7 @@ const Landing = () => {
               className="dangologo-icon"
               loading="lazy"
               alt="DangoDot Logo Icon"
-              src="./public/dangologo@2x.png"
+              src={DangoDotLogo}
             />
           </div>
           <div className="dangodot">DangoDot</div>
@@ -61,17 +65,18 @@ const Landing = () => {
               <img
                 className="landingpagepic1-icon"
                 loading="lazy"
-                alt=""
+                alt="Zoro with sword in mouth"
                 src={LandingPic1}
               />
             </div>
           </div>
+          
           <div className="landingpagepic2-parent">
             <img
               className="landingpagepic2-icon"
               loading="lazy"
-              alt=""
-              src="./public/landingpagepic2@2x.png"
+              alt="Happy flying with Natsu"
+              src={LandingPic2}
             />
 
             <div className="sitefeaturecontent2-wrapper">
