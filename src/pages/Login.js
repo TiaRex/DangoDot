@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import './styles/Login.css';
+import '../styles/Login.css';
 
-import icons8user from '../Assets/icons8-user.png';
-import icons8email from '../Assets/icons8-email.png';
-import icons8password from '../Assets/icons8-password.png';
+import user from '../Assets/user.png';
+import email from '../Assets/email.png';
+import password from '../Assets/password.png';
 
 const Login = () => {
   const [action, setAction] = useState('Sign Up');
@@ -24,18 +24,18 @@ const Login = () => {
           {/* The action hides the user's name from the Login screen */}
           {action === "Login" ? null : (
             <div className='input'>
-              <img src={icons8user} alt='user' />
+              <img src={user} alt='user' />
               <input type='text' placeholder='Full Name' />
             </div>
           )}
 
           <div className='input'>
-            <img src={icons8email} alt='envelope for email' />
+            <img src={email} alt='envelope for email' />
             <input type='email' placeholder='janedoe@gmail.com' />
           </div>
 
           <div className='input'>
-            <img src={icons8password} alt='lock for password' />
+            <img src={password} alt='lock for password' />
             <input type='password' placeholder='**********' />
           </div>
         </div>
