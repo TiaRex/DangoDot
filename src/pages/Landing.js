@@ -7,6 +7,7 @@ import "../styles/Landing.css"
 import DangoDotLogo from "../assets/dangologo@2x.png"
 import LandingPic1 from "../assets/landingpagepic1@2x.png"
 import LandingPic2 from "../assets/landingpagepic2@2x.png"
+import DisappearingDangos from "../assets/DisappearingDangos.png"
 
 // copy and past html code within return
 const Landing = () => {
@@ -112,7 +113,6 @@ const Landing = () => {
               </div>
               <div className="subfeaturebox2">
                 <img className="feature-icon-two" alt="" src="./public/00-1.svg" />
-
                 <div className="feature-3">Feature 3</div>
                 <div className="body-text-for1">
                   Body text for whatever you’d like to suggest. Add main
@@ -181,8 +181,8 @@ const Landing = () => {
               <img
                 className="disappearingdango-icon"
                 loading="lazy"
-                alt=""
-                src="./public/rectangle-12@2x.png"
+                alt="2 Dangos Surrounded by Stars"
+                src={DisappearingDangos}
               />
 
               <div className="highlight-content">
@@ -242,7 +242,7 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* // <!-- Navigation footer section --> */}
+   {/* Navigation Footer Section */}
       <footer className="navigation-footer">
         <div className="divider"></div>
         <div className="footer-content">
