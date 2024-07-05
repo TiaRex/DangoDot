@@ -1,0 +1,60 @@
+.HomeNav {
+    text-align: center;
+  }
+  
+  .HomeNav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .HomeNav-logo {
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .movie-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+  }
+  
+  .movie-item {
+    width: 150px;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  footer nav ul li {
+    cursor: pointer;
+  }
+  
