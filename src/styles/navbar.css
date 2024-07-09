@@ -1,0 +1,19 @@
+nav{
+  background-color: #FFE4E1;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+li{
+  display: inline;
+}
