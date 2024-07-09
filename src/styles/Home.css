@@ -1,48 +1,76 @@
 .HomeNav {
-    text-align: center;
+text-align: center;
   }
   
   .HomeNav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #282c34;
-    color: white;
+    padding: 10px 20px;
+    background-color: #ffd9d3;
+    color: black;
   }
   
+  .HomeNav-logo-text {
+    display: flex;
+    align-items: center;
+  }
+
   .HomeNav-logo {
-    height: 50px;
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .HomeNav-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
   }
   
-  nav ul {
+  .HomeNav-ul {
     list-style-type: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
   }
   
-  nav ul li {
+  .HomeNav-ul li {
     cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
   }
   
   main {
     padding: 20px;
+    background: #fffff1;
   }
   
   .movie-list {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 80px;
     overflow-x: auto;
   }
   
   .movie-item {
-    width: 150px;
+    width: 300px;
+  }
+
+  .movie-cover {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
   }
   
   footer {
     padding: 20px;
-    background-color: #282c34;
-    color: white;
+    background-color: #def2cf;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;

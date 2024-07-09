@@ -1,22 +1,41 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/Home.css';
+import Dangologo from '../Assets/Dangologo.png';
+import MyHeroAcademia from '../Assets/myheroacad.jpeg';
+import FullmetalAlchemist from '../Assets/Fmab.jpeg';
+import HunterxHunter from '../Assets/hxh.jpeg';
+import JujustuKaisen from '../Assets/Jujutsu-Kaisen.png';
+import Bleach from '../Assets/bleach-cover.jpg';
+import AttackOnTitan from '../Assets/aot.jpg';
+import OnePiece from '../Assets/onep.jpg';
+import Naruto from '../Assets/naruto-cover.jpg';
+import DemonSlayer from '../Assets/demonslayer.jpeg';
+import DeathNote from '../Assets/deathnote.jpg';
 
 // Sample data for the sections
 const popularMovies = [
-  { id: 1, title: "My Neighbor Totoro", image: "/images/totoro.jpg" },
-  { id: 2, title: "Spirited Away", image: "/images/spirited_away.jpg" },
-  { id: 3, title: "Your Name", image: "/images/your_name.jpg" },
+  { id: 1, title: "My Hero Academia", image: MyHeroAcademia},
+  { id: 2, title: "Fullmetal Alchemist", image: FullmetalAlchemist},
+  { id: 3, title: "Hunter X Hunter", image: HunterxHunter },
+  { id: 4, title: "Jujutsu Kaisen", image: JujustuKaisen},
+  { id: 5, title: "Bleach", image: Bleach },
+  { id: 6, title: "Attack on Titan", image: AttackOnTitan},
+  { id: 7, title: "One Piece", image: OnePiece },
+  { id: 8, title: "Naruto", image: Naruto },
+  { id: 9, title: "Demon Slayer", image: DemonSlayer },
+  { id: 10, title: "Death Note", image: DeathNote },
 ];
 
 const continueWatching = [
-  { id: 1, title: "Attack on Titan", image: "/images/attack_on_titan.jpg" },
-  { id: 2, title: "One Piece", image: "/images/one_piece.jpg" },
+  { id: 1, title: "Bleach", image: Bleach },
+  { id: 2, title: "One Piece", image: OnePiece },
+  { id: 2, title: "Fullmetal Alchemist", image: FullmetalAlchemist },
 ];
 
 const watchlist = [
-  { id: 1, title: "Naruto", image: "/images/naruto.jpg" },
-  { id: 2, title: "Demon Slayer", image: "/images/demon_slayer.jpg" },
+  { id: 1, title: "Naruto", image: Naruto },
+  { id: 2, title: "Demon Slayer", image: DemonSlayer },
 ];
 
 const Home = () => {
@@ -25,9 +44,12 @@ const Home = () => {
       <Navbar />
       <div className="HomeNav">
         <header className="HomeNav-header">
-          <img src='/src/Assets/Dangologo.png' alt="Dango Logo" className="HomeNav-logo" />
+          <div className="HomeNav-logo-text">
+          <img src={Dangologo} alt="Dango Logo" className="HomeNav-logo" />
+          <p className="HomeNav-text">DangoDot</p>
+          </div>
           <nav>
-            <ul>
+            <ul className="HomeNav-ul">
               <li>Home</li>
               <li>Watchlist</li>
               <li>Settings</li>
@@ -42,7 +64,7 @@ const Home = () => {
             <div className="movie-list">
               {popularMovies.map(movie => (
                 <div key={movie.id} className="movie-item">
-                  <img src={movie.image} alt={movie.title} />
+                  <img className="movie-cover" src={movie.image} alt={movie.title} />
                   <p>{movie.title}</p>
                 </div>
               ))}
@@ -54,7 +76,7 @@ const Home = () => {
             <div className="movie-list">
               {continueWatching.map(movie => (
                 <div key={movie.id} className="movie-item">
-                  <img src={movie.image} alt={movie.title} />
+                  <img className="movie-cover" src={movie.image} alt={movie.title} />
                   <p>{movie.title}</p>
                 </div>
               ))}
@@ -66,7 +88,7 @@ const Home = () => {
             <div className="movie-list">
               {watchlist.map(movie => (
                 <div key={movie.id} className="movie-item">
-                  <img src={movie.image} alt={movie.title} />
+                  <img className="movie-cover" src={movie.image} alt={movie.title} />
                   <p>{movie.title}</p>
                 </div>
               ))}
@@ -75,7 +97,7 @@ const Home = () => {
         </main>
 
         <footer>
-          <p>&copy; 2024 Anime Movie App</p>
+          <p>&copy; 2024 DangoDot Movie App</p>
           <nav>
             <ul>
               <li>Privacy Policy</li>
