@@ -53,7 +53,9 @@ const Home = () => {
               <li>Home</li>
               <li>Watchlist</li>
               <li>Settings</li>
-              <li>Search</li>
+              <li>
+                <input type="text" placeholder="Search..." className="search-bar"/>
+              </li>
             </ul>
           </nav>
         </header>
