@@ -20,7 +20,6 @@ const Watchlist = () => {
             <h1 class="favorites-heading">Favorites</h1>
             <div class="favorites-box">
               <img src={JujutsuKaisen} alt="Jujutsu-Kaisen"></img>
-              <img src={DemonSlayer} alt="Demon Slayer"></img>
             </div>
           </section>
           <br></br>
@@ -30,6 +29,11 @@ const Watchlist = () => {
             <h1 class="later-heading">Watch Later</h1>
             <div class="later-box">
               <img src={DemonSlayer} alt="Demon Slayer"></img>
+            </div>
+            <div class="later-text">
+              <strong>Demon Slayer</strong>
+              <p>2023 | 4 Seasons</p>
+              <p>Shonen Manga, Action Manga, Dark Fantasy</p>
             </div>
           </section>
           <br></br>
