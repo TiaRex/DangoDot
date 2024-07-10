@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-
+// add import css folder here
+// copy and past html code within return
 const Home = () => {
   return (
     <div>
