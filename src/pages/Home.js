@@ -1,17 +1,17 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/Home.css';
-import Dangologo from '../Assets/Dangologo.png';
-import MyHeroAcademia from '../Assets/myheroacad.jpeg';
-import FullmetalAlchemist from '../Assets/Fmab.jpeg';
-import HunterxHunter from '../Assets/hxh.jpeg';
-import JujustuKaisen from '../Assets/Jujutsu-Kaisen.png';
-import Bleach from '../Assets/bleach-cover.jpg';
-import AttackOnTitan from '../Assets/aot.jpg';
-import OnePiece from '../Assets/onep.jpg';
-import Naruto from '../Assets/naruto-cover.jpg';
-import DemonSlayer from '../Assets/demonslayer.jpeg';
-import DeathNote from '../Assets/deathnote.jpg';
+import Dangologo from '../assets/Dangologo.png';
+import MyHeroAcademia from '../assets/myheroacad.jpeg';
+import FullmetalAlchemist from '../assets/Fmab.jpeg';
+import HunterxHunter from '../assets/hxh.jpeg';
+import JujustuKaisen from '../assets/Jujutsu-Kaisen.png';
+import Bleach from '../assets/bleach-cover.jpg';
+import AttackOnTitan from '../assets/aot.jpg';
+import OnePiece from '../assets/onep.jpg';
+import Naruto from '../assets/naruto-cover.jpg';
+import DemonSlayer from '../assets/demonslayer.jpeg';
+import DeathNote from '../assets/deathnote.jpg';
 
 // Sample data for the sections
 const popularMovies = [
