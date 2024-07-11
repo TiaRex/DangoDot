@@ -1,0 +1,95 @@
+.HomeNav {
+text-align: center;
+  }
+  
+  .HomeNav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffd9d3;
+    color: black;
+  }
+  
+  .HomeNav-logo-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .HomeNav-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .HomeNav-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .HomeNav-ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .HomeNav-ul li {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    padding: 0.5rem;
+    border: 1px solid #95b47e;
+    border-radius: 4px;
+  }
+
+  main {
+    padding: 20px;
+    background: #fffff1;
+  }
+  
+  .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    overflow-x: auto;
+  }
+  
+  .movie-item {
+    width: 300px;
+  }
+
+  .movie-cover {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #def2cf;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  footer nav ul li {
+    cursor: pointer;
+  }
+  
