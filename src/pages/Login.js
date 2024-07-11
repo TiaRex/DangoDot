@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/Login.css';
 
-import user from '../Assets/user.png';
-import email from '../Assets/email.png';
-import password from '../Assets/password.png';
+import user from '../assets/user.png';
+import email from '../assets/email.png';
+import password from '../assets/password.png';
 
 const Login = () => {
   const [action, setAction] = useState('Sign Up');
