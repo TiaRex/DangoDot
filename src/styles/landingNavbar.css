@@ -1,0 +1,87 @@
+.dangodotlogobox {
+    height: 95px;
+    width: 360px;
+    position: relative;
+    background-color: var(--color-#FFE4E1);
+    display: none;
+    max-width: 100%;
+  }
+  .dangologo-icon {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .dangologo-wrapper {
+    height: 89px;
+    width: 93px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 var(--padding-11xs);
+    box-sizing: border-box;
+  }
+  .dangodot {
+    height: 93px;
+    flex: 1;
+    position: relative;
+    line-height: 150%;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  .dangodotlogobox-parent {
+    width: 360px;
+    background-color: var(--color-#FFE4E1);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 var(--padding-11xs) 19px;
+    box-sizing: border-box;
+    gap: var(--gap-mini);
+    max-width: 100%;
+  }
+  .loginsignup {
+    position: relative;
+    font-size: var(--small-text-size);
+    line-height: 150%;
+    font-weight: 500;
+    font-family: var(--small-text);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    min-width: 119px;
+  }
+  .loginsignupbutton {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-sm) var(--padding-5xl);
+    background-color: var(--color-darkseagreen);
+    box-shadow: var(--button-shadow);
+    border-radius: var(--br-5xs);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .button1:hover,
+  .button2:hover,
+  .button3:hover,
+  .button:hover,
+  .loginsignupbutton:hover {
+    background-color: var(--color-darkolivegreen);
+  }
+  .loginsignupbutton-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 var(--padding-xl);
+  }

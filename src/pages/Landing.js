@@ -1,10 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
+import LandingNavbar from '../components/LandingNavbar';
 import "../styles/Landing.css"
 
 // picture/images imports here
 // Update pictures by adding import and update src link under img
-import DangoDotLogo from "../assets/dangologo@2x.png"
 import LandingPic1 from "../assets/landingpagepic1@2x.png"
 import LandingPic2 from "../assets/landingpagepic2@2x.png"
 import DisappearingDangos from "../assets/DisappearingDangos.png"
@@ -13,27 +12,8 @@ import DisappearingDangos from "../assets/DisappearingDangos.png"
 const Landing = () => {
   return (
   <>
-  <Navbar></Navbar>
+  <LandingNavbar></LandingNavbar>
     <div className="landing-page-liz">
-      <header className="navigationheader">
-        <div className="dangodotlogobox-parent">
-          <div className="dangodotlogobox"></div>
-          <div className="dangologo-wrapper">
-            <img
-              className="dangologo-icon"
-              loading="lazy"
-              alt="DangoDot Logo Icon"
-              src={DangoDotLogo}
-            />
-          </div>
-          <div className="dangodot">DangoDot</div>
-        </div>
-        <div className="loginsignupbutton-wrapper">
-          <button className="loginsignupbutton" id="logInSignUpButton">
-            <div className="loginsignup">Log-In/Sign-Up</div>
-          </button>
-        </div>
-      </header>
       <section className="landing-page-liz-inner">
         <div className="feature-grid-parent">
           <div className="feature-grid">
