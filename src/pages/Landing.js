@@ -3,9 +3,14 @@ import LandingNavbar from '../components/LandingNavbar';
 import "../styles/Landing.css"
 // picture/images imports here
 // Update pictures by adding import and update src link under img
+
+// Landing Page Body Images
 import LandingPic1 from "../assets/landingpagepic1@2x.png"
 import LandingPic2 from "../assets/landingpagepic2@2x.png"
 import DisappearingDangos from "../assets/DisappearingDangos.png"
+
+// Subscription Feature Image
+import FeatureIcon from "../assets/dangologo@2x.png"
 
 // Navigation Footer Images
 import FacebookIcon from "../assets/facebookicon.svg"
@@ -20,8 +25,8 @@ const Landing = () => {
   return (
   <>
   <LandingNavbar></LandingNavbar>
-    <div className="landing-page-liz">
-      <section className="landing-page-liz-inner">
+    <div className="landing-page-body">
+      <section className="landing-page-body-inner">
         <div className="feature-grid-parent">
           <div className="feature-grid">
             <div className="landingpageintro">
@@ -32,7 +37,8 @@ const Landing = () => {
                 </div>
                 <div className="button-wrapper">
                   <button className="button">
-                    <div className="start-your-30-day">
+                 
+                  <div className="trial-period">
                       Start Your 30-Day Free Trial
                     </div>
                   </button>
@@ -83,48 +89,62 @@ const Landing = () => {
         <div className="subfeaturecontent">
           <h2 className="subfeatheading">Subscription Features</h2>
           <div className="subfeaturedescriptions">
+            
             <div className="subfeaturerow1">
               <div className="subfeaturebox1">
                 <img
-                  className="feature-icon-one"
+                  className="feature-one-icon"
                   loading="lazy"
-                  alt=""
-                  src="./public/00.svg"
+                  alt="mini dangodot logo"
+                  src={FeatureIcon}
                 />
-
                 <div className="feature-1">Feature 1</div>
                 <div className="body-text-for">
-                  Body text for whatever you’d like to say. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
+                  This is the body text for feature 1.
+                  This is the body text for feature 1.
+                  This is the body text for feature 1.
                 </div>
               </div>
+
               <div className="subfeaturebox2">
-                <img className="feature-icon-two" alt="" src="./public/00-1.svg" />
-                <div className="feature-3">Feature 3</div>
+                <img className="feature-icon-two" 
+                      alt="mini dangodot logo" 
+                      src={FeatureIcon} />
+                <div className="feature-2">Feature 2</div>
                 <div className="body-text-for1">
-                  Body text for whatever you’d like to suggest. Add main
-                  takeaway points, quotes, anecdotes, or even a very very short
-                  story.
+                  This is the body text for feature 2.
+                  This is the body text for feature 2.
+                  This is the body text for feature 2.
                 </div>
               </div>
             </div>
-            <div className="subfeaturerow2">
-              <div className="parent">
-                <img className="icon" alt="" src="./public/00-2.svg" />
 
-                <div className="feature-2">Feature 2</div>
+            <div className="subfeaturerow2">
+              <div className="subfeaturebox3">
+
+                <img className="feature-icon-three" 
+                      alt="mini dangodot logo" 
+                      src={FeatureIcon} />
+
+                <div className="feature-3">Feature 3</div>
+
                 <div className="body-text-for2">
-                  Body text for whatever you’d like to claim. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
+                  This is the body text for feature 3.
+                  This is the body text for feature 3.
+                  This is the body text for feature 3.
                 </div>
               </div>
-              <div className="group">
-                <img className="icon1" alt="" src="./public/00-3.svg" />
+              
+              <div className="subfeaturebox4">
+                <img className="feature-icon-four" 
+                      alt="mini dangodot logo" 
+                      src={FeatureIcon} />
 
                 <div className="feature-4">Feature 4</div>
                 <div className="body-text-for3">
-                  Body text for whatever you’d like to type. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
+                This is the body text for feature 4.
+                This is the body text for feature 4.
+                This is the body text for feature 4.
                 </div>
               </div>
             </div>
