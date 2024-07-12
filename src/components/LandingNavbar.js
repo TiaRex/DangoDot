@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import '../styles/navbar.css';
-import DangoDotLogo from '../assets/Dangologo.png'; 
-
+import DangoDotLogo from '../assets/dangologo@2x.png'; 
 const LandingNavbar = () => {
   return (
     <>

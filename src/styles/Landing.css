@@ -820,12 +820,12 @@
   position: relative;
   line-height: 150%;
 }
-.biyoutube-icon,
-.icon-park-twotonetiktok,
-.mdifacebook-icon,
-.mdireddit-icon,
-.primetwitter-icon,
-.riinstagram-fill-icon {
+.youtube-icon,
+.tik-tok-icon,
+.facebook-icon,
+.reddit-icon,
+.X-icon,
+.instagram-icon {
   height: 30px;
   width: 30px;
   position: relative;
@@ -833,8 +833,8 @@
   flex-shrink: 0;
   min-height: 30px;
 }
-.icon-park-twotonetiktok,
-.primetwitter-icon {
+.tik-tok-icon,
+.X-icon {
   object-fit: cover;
 }
 .social,

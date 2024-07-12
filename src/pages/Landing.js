@@ -1,12 +1,19 @@
 import React from 'react'
 import LandingNavbar from '../components/LandingNavbar';
 import "../styles/Landing.css"
-
 // picture/images imports here
 // Update pictures by adding import and update src link under img
 import LandingPic1 from "../assets/landingpagepic1@2x.png"
 import LandingPic2 from "../assets/landingpagepic2@2x.png"
 import DisappearingDangos from "../assets/DisappearingDangos.png"
+
+// Navigation Footer Images
+import FacebookIcon from "../assets/facebookicon.svg"
+import RedditIcon from "../assets/redditicon.svg"
+import YouTubeIcon from "../assets/youtubeicon.svg"
+import InstagramIcon from "../assets/instagramicon.svg"
+import XIcon from "../assets/xicon.png"
+import TikTokIcon from "../assets/tiktokicon.png"
 
 // copy and past html code within return
 const Landing = () => {
@@ -230,45 +237,45 @@ const Landing = () => {
             <div className="connect-with-us">Connect With Us</div>
             <div className="social-icons">
               <img
-                className="mdifacebook-icon"
+                className="facebook-icon"
                 loading="lazy"
                 alt="Facebook Logo Icon"
-                src="./public/mdifacebook.svg"
+                src={FacebookIcon}
               />
 
               <img
-                className="mdireddit-icon"
+                className="reddit-icon"
                 loading="lazy"
                 alt="Reddit Logo Icon"
-                src="./public/mdireddit.svg"
+                src={RedditIcon}
               />
 
               <img
-                className="biyoutube-icon"
+                className="youtube-icon"
                 loading="lazy"
                 alt="YouTube Logo Icon"
-                src="./public/biyoutube.svg"
+                src={YouTubeIcon}
               />
 
               <img
-                className="riinstagram-fill-icon"
+                className="instagram-icon"
                 loading="lazy"
                 alt="Instagram Logo Icon"
-                src="./public/riinstagramfill.svg"
+                src={InstagramIcon}
               />
 
               <img
-                className="primetwitter-icon"
+                className="X-icon"
                 loading="lazy"
-                alt="Twitter Logo Icon"
-                src="./public/primetwitter@2x.png"
+                alt="X Logo Icon"
+                src={XIcon}
               />
 
               <img
-                className="icon-park-twotonetiktok"
+                className="tik-tok-icon"
                 loading="lazy"
                 alt="Tik-tok Logo Icon"
-                src="./public/iconparktwotonetiktok@2x.png"
+                src={TikTokIcon}
               />
             </div>
           </div>
