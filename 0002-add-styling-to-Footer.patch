@@ -1,0 +1,37 @@
+From a60772c034c37ffbc7ced5a1e688697ada675b7d Mon Sep 17 00:00:00 2001
+From: locationcyberia <brianna.corker@protonmail.com>
+Date: Sat, 13 Jul 2024 23:44:13 -0400
+Subject: [PATCH 2/4] add styling to <Footer />
+
+---
+ src/styles/footer.css | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 src/styles/footer.css
+
+diff --git a/src/styles/footer.css b/src/styles/footer.css
+new file mode 100644
+index 0000000..ab22f31
+--- /dev/null
++++ b/src/styles/footer.css
+@@ -0,0 +1,18 @@
++footer {
++  padding: 20px;
++  background-color: #def2cf;
++  color: black;
++  display: flex;
++  justify-content: space-between;
++  align-items: center;
++}
++
++footer nav ul {
++  list-style-type: none;
++  display: flex;
++  gap: 15px;
++}
++
++footer nav ul li {
++  cursor: pointer;
++}
+-- 
+2.45.2
+

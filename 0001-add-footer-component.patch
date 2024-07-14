@@ -1,0 +1,37 @@
+From 62d220b620ecd5ea9a0d994f425b5160a94a1952 Mon Sep 17 00:00:00 2001
+From: locationcyberia <brianna.corker@protonmail.com>
+Date: Sat, 13 Jul 2024 23:43:11 -0400
+Subject: [PATCH 1/4] add footer component
+
+---
+ src/components/Footer.js | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 src/components/Footer.js
+
+diff --git a/src/components/Footer.js b/src/components/Footer.js
+new file mode 100644
+index 0000000..720933d
+--- /dev/null
++++ b/src/components/Footer.js
+@@ -0,0 +1,18 @@
++import '../styles/navbar.css';
++
++const Footer = () => {
++  return (
++    <footer>
++    <p>&copy; 2024 DangoDot Movie App</p>
++    <nav>
++      <ul>
++        <li>Privacy Policy</li>
++        <li>Terms of Service</li>
++        <li>Contact Us</li>
++      </ul>
++    </nav>
++  </footer>
++  );
++}
++
++export default Footer;
+-- 
+2.45.2
+
