@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import defaultUser from "../assets/defaultUser.png";
-import "../styles/editProfile.css"; // Ensure this is the correct path to your CSS file
+import "../styles/editProfile.css";
 
 const EditProfile = () => {
   const [profilePicture, setProfilePicture] = useState(defaultUser);
