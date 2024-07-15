@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Dangologo from "../assets/Dangologo.png";
 import "../styles/sidebar.css";
 
-const Sidebar = ({ onContentChange, renderProfilePictureContent }) => (
+const Sidebar = ({ onContentChange }) => (
   <section className="sidebar-container">
     <div className="logo">
       <Link to="/home">
@@ -17,7 +17,7 @@ const Sidebar = ({ onContentChange, renderProfilePictureContent }) => (
       <a
         href="#"
         className="sidebar-item"
-        onClick={() => onContentChange(renderProfilePictureContent())}
+        onClick={() => onContentChange("EditProfile")}
       >
         Edit Profile
       </a>
@@ -28,16 +28,23 @@ const Sidebar = ({ onContentChange, renderProfilePictureContent }) => (
       <a
         href="#"
         className="sidebar-item"
-        onClick={() => onContentChange("Username/Password content goes here.")}
+        onClick={() => onContentChange("UpdateAccount")}
       >
         Update Account
       </a>
       <a
         href="#"
         className="sidebar-item"
-        onClick={() => onContentChange("Language content goes here.")}
+        onClick={() => onContentChange("Language")}
       >
-        Notifications
+        Language
+      </a>
+      <a
+        href="#"
+        className="sidebar-item"
+        onClick={() => onContentChange("Theme")}
+      >
+        Theme
       </a>
     </div>
   </section>

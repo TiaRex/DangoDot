@@ -1,8 +1,9 @@
-/* src/styles/sidebar.css */
 .sidebar-container {
   width: 255px;
-  height: 100%;
+  height: fixed;
   background-color: #ffffdd;
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 .logo {
@@ -34,7 +35,7 @@
 .sidebar-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .sidebar-item {
@@ -56,5 +57,5 @@
 h3 {
   margin-top: 25px;
   margin-left: 0px;
-  padding: 10px;
+  padding: 15px;
 }
