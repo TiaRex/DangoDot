@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/updateAccount.css"; // Ensure this is the correct path to your CSS file
+import "../styles/updateAccount.css";
 
 const UpdateAccount = () => {
   const [email, setEmail] = useState("");
