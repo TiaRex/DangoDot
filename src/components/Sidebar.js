@@ -15,7 +15,7 @@ const Sidebar = ({ onContentChange }) => (
     <h3>Profile Settings</h3>
     <div className="sidebar-list">
       <a
-        href="#"
+        href="#/"
         className="sidebar-item"
         onClick={() => onContentChange("EditProfile")}
       >
@@ -26,21 +26,21 @@ const Sidebar = ({ onContentChange }) => (
     <h3>Account Settings</h3>
     <div className="sidebar-list">
       <a
-        href="#"
+        href="#/"
         className="sidebar-item"
         onClick={() => onContentChange("UpdateAccount")}
       >
         Update Account
       </a>
       <a
-        href="#"
+        href="#/"
         className="sidebar-item"
         onClick={() => onContentChange("Language")}
       >
         Language
       </a>
       <a
-        href="#"
+        href="#/"
         className="sidebar-item"
         onClick={() => onContentChange("Theme")}
       >
