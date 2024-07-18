@@ -1,0 +1,67 @@
+.update-account-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.form-group-horizontal {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+.form-group-horizontal .form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-group-horizontal .form-group:last-child {
+  margin-right: 0;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.form-group .error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.save-changes-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffcccb;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.confirmation-message {
+  font-size: 18px;
+  color: black;
+  margin-top: 20px;
+}
