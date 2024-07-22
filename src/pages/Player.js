@@ -23,7 +23,6 @@ const Player = () => {
         <section className="content-container">
           <div className="content">
             <div className="video-container">
-              <h1>Video Player</h1>
               <video width="1080" height="715" controls>
                 {/* Add API Link */}
                 <source src="your-video-url.mp4" type="video/mp4" />
