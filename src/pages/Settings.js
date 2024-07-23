@@ -27,7 +27,7 @@ const Settings = () => {
   };
 
   return (
-    <div>
+    <div className="settings-page">
       <Navbar />
       <div className="wrapper">
         <Sidebar onContentChange={setContent} />
