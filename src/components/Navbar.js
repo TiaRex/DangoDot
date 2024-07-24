@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import Dangologo from '../assets/Dangologo.png';
 import '../styles/navbar.css';
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
+    <div className="HomeNav">
+    <header className="HomeNav-header">
+      <div className="HomeNav-logo-text">
+      <img src={Dangologo} alt="Dango Logo" className="HomeNav-logo" />
+      <p className="HomeNav-text">DangoDot</p>
+      </div>
+      <nav>
+        <ul className="HomeNav-ul">
         <li>
           <Link to="/">Landing</Link>
         </li>
@@ -23,8 +30,14 @@ const Navbar = () => {
         <li>
           <Link to="/settings">Settings</Link>
         </li>
-      </ul>
-    </nav>
+        <button className="search-bar button">
+            <input type="text" placeholder="Search..." className="search-bar"/>
+        </button>
+        </ul>
+      </nav>
+    </header>
+    </div>
+  
   );
 }
 
