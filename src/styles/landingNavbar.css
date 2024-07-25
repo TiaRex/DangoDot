@@ -38,7 +38,7 @@
   }
   .dangodotlogobox-parent {
     width: 360px;
-    background-color: var(--color-#FFE4E1);
+    background-color: var(--color-mistyrose);
     display: flex;
     flex-direction: row;
     align-items: flex-end;

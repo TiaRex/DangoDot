@@ -1,8 +1,6 @@
-/* Copy and paste CSS file here */
-
 .begin-your-anime,
 .navigationheader {
-  align-self: stretch;
+  align-self: auto;
   color: var(--color-black);
 }
 .navigationheader {
@@ -965,6 +963,7 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
 @media screen and (max-width: 1325px) {
   .landingpagepic1-icon,
   .sitefeaturecontent1 {
@@ -986,7 +985,7 @@
     flex: 1;
   }
   .subfeaturerow1,
-  .subfeaturerow2,  {
+  .subfeaturerow2 {
     flex-wrap: wrap;
   }
   .subfeaturebox4,

@@ -1,5 +1,5 @@
 nav{
-  background-color: #FFE4E1;
+  background-color:var(--color-mistyrose);
 }
 
 ul{

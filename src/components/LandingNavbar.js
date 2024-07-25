@@ -11,6 +11,7 @@ const LandingNavbar = () => {
           </li>
         </ul>
       </nav>
+      
       <div className="landing-page-liz">
         <header className="navigationheader">
           <div className="dangodotlogobox-parent">

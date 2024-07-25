@@ -1,5 +1,6 @@
 import React from 'react'
 import LandingNavbar from '../components/LandingNavbar';
+import Footer from '../components/Footer';
 import "../styles/Landing.css"
 // picture/images imports here
 // Update pictures by adding import and update src link under img
@@ -13,12 +14,12 @@ import DisappearingDangos from "../assets/DisappearingDangos.png"
 import FeatureIcon from "../assets/dangologo@2x.png"
 
 // Navigation Footer Images
-import FacebookIcon from "../assets/facebookicon.svg"
-import RedditIcon from "../assets/redditicon.svg"
-import YouTubeIcon from "../assets/youtubeicon.svg"
-import InstagramIcon from "../assets/instagramicon.svg"
-import XIcon from "../assets/xicon.png"
-import TikTokIcon from "../assets/tiktokicon.png"
+// import FacebookIcon from "../assets/facebookicon.svg"
+// import RedditIcon from "../assets/redditicon.svg"
+// import YouTubeIcon from "../assets/youtubeicon.svg"
+// import InstagramIcon from "../assets/instagramicon.svg"
+// import XIcon from "../assets/xicon.png"
+// import TikTokIcon from "../assets/tiktokicon.png"
 
 // copy and past html code within return
 const Landing = () => {
@@ -125,6 +126,7 @@ const Landing = () => {
                 <img className="feature-icon-three" 
                       alt="mini dangodot logo" 
                       src={FeatureIcon} />
+                      
 
                 <div className="feature-3">Feature 3</div>
 
@@ -249,12 +251,15 @@ const Landing = () => {
         </div>
       </section>
 
-   {/* Navigation Footer Section */}
-      <footer className="navigation-footer">
+   {/* Navigation Footer Component */}
+   <Footer></Footer>
+
+      {/* <footer className="navigation-footer">
         <div className="divider"></div>
         <div className="footer-content">
           <div className="social">
             <div className="connect-with-us">Connect With Us</div>
+            
             <div className="social-icons">
               <img
                 className="facebook-icon"
@@ -298,6 +303,9 @@ const Landing = () => {
                 src={TikTokIcon}
               />
             </div>
+
+            <div className="dangodot-copyright"> &copy; 2024 DangoDot Anime App</div>
+
           </div>
           <div className="footer-links">
             <div className="link-list-parent">
@@ -319,7 +327,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
       </>
 )}
