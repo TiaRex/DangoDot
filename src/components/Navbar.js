@@ -25,9 +25,6 @@ const Navbar = () => {
           <Link to="/watchlist">Watchlist</Link>
         </li>
         <li>
-          <Link to="/player">Video Player</Link>
-        </li>
-        <li>
           <Link to="/settings">Settings</Link>
         </li>
         <button className="search-bar button">
