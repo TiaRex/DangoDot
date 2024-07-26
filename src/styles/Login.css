@@ -8,9 +8,10 @@ body {
     flex-direction: column;
     width: 600px;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 100px;
     background: #c9958c;
     padding-bottom: 30px;
+    margin-bottom: 100px;
     }
     
     .header {

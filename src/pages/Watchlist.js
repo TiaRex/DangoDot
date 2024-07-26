@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import '../styles/Watchlist.css';
+import JujutsuKaisen from '../assets/Jujutsu-Kaisen.png';
+import DemonSlayer from '../assets/demonslayer.jpeg';
 
 const Watchlist = () => {
   return (
@@ -17,7 +19,7 @@ const Watchlist = () => {
           <section class="favorites-container" id="favorites-container">
             <h1 class="favorites-heading">Favorites</h1>
             <div class="favorites-box">
-              {/* <img src=images/demonslayer.jpg></img> */}
+              <img src={JujutsuKaisen} alt="Jujutsu-Kaisen"></img>
             </div>
           </section>
           <br></br>
@@ -26,7 +28,12 @@ const Watchlist = () => {
           <section class="later-container" id="later-container">
             <h1 class="later-heading">Watch Later</h1>
             <div class="later-box">
-              {/* <img src=images/demonslayer.jpg></img> */}
+              <img src={DemonSlayer} alt="Demon Slayer"></img>
+            </div>
+            <div class="later-text">
+              <strong>Demon Slayer</strong>
+              <p>2023 | 4 Seasons</p>
+              <p>Shonen Manga, Action Manga, Dark Fantasy</p>
             </div>
           </section>
           <br></br>
