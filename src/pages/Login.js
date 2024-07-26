@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../styles/Login.css';
 
 import user from '../assets/user.png';
@@ -12,7 +13,6 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <h1>Login</h1>
       
       <div className='container'>
         <div className='header'>
@@ -65,6 +65,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

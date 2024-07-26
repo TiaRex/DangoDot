@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/Home.css';
-import Dangologo from '../assets/Dangologo.png';
 import MyHeroAcademia from '../assets/myheroacad.jpeg';
 import FullmetalAlchemist from '../assets/Fmab.jpeg';
 import HunterxHunter from '../assets/hxh.jpeg';
@@ -42,27 +41,10 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="HomeNav">
-        <header className="HomeNav-header">
-          <div className="HomeNav-logo-text">
-          <img src={Dangologo} alt="Dango Logo" className="HomeNav-logo" />
-          <p className="HomeNav-text">DangoDot</p>
-          </div>
-          <nav>
-            <ul className="HomeNav-ul">
-              <li>Home</li>
-              <li>Watchlist</li>
-              <li>Settings</li>
-              <li>
-                <input type="text" placeholder="Search..." className="search-bar"/>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
+      <div>
         <main>
           <section>
-            <h2>Popular Movies</h2>
+            <h2 className='headers'>Popular Movies</h2>
             <div className="movie-list">
               {popularMovies.map(movie => (
                 <div key={movie.id} className="movie-item">
@@ -74,7 +56,7 @@ const Home = () => {
           </section>
 
           <section>
-            <h2>Continue Watching</h2>
+            <h2 className='headers'>Continue Watching</h2>
             <div className="movie-list">
               {continueWatching.map(movie => (
                 <div key={movie.id} className="movie-item">
@@ -86,7 +68,7 @@ const Home = () => {
           </section>
 
           <section>
-            <h2>Watchlist</h2>
+            <h2 className='headers'>Watchlist</h2>
             <div className="movie-list">
               {watchlist.map(movie => (
                 <div key={movie.id} className="movie-item">
