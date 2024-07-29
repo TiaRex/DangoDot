@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/player.css";
 
 const Player = () => {
-  const [selectedSeason, setSelectedSeason] = useState("Season 1");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+  const { anime } = location.state || {};
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  if (!anime) {
+    return <h1>Error 404: Page Not Found :(</h1>;
+  }
 
-  const handleSeasonSelect = (season) => {
-    setSelectedSeason(season);
-    setIsDropdownOpen(false);
-  };
+  const filteredSynopsis = anime.synopsis
+    .replace(/\[Written by MAL Rewrite\]/, "")
+    .trim();
 
   return (
     <div className="player-page">
@@ -23,61 +23,59 @@ const Player = () => {
         <section className="content-container">
           <div className="content">
             <div className="video-container">
-              <video width="1080" height="715" controls>
-                {/* Add API Link */}
-                <source src="your-video-url.mp4" type="video/mp4" />
-              </video>
-              <p className="video-title">You are now watching [Anime Title].</p>
-              <p className="video-subtitle">Enjoy! ☆*:.｡.o(≧▽≦)o.｡.:*☆</p>
+              {anime.trailer.url ? (
+                <>
+                  <iframe
+                    width="1080"
+                    height="715"
+                    src={`https://www.youtube.com/embed/${new URL(
+                      anime.trailer.url
+                    ).searchParams.get("v")}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title={anime.title}
+                  ></iframe>
+                  <p className="video-title">
+                    You are now watching the trailer for {anime.title}.
+                  </p>
+                  <p className="video-subtitle">Enjoy! ☆*:.｡.o(≧▽≦)o.｡.:*☆</p>
+                </>
+              ) : (
+                <p>
+                  Aaa! We're sorry -- There is no trailer available. ( ; ω ; )
+                  <br />
+                  You can read more about the anime down below!
+                </p>
+              )}
             </div>
             <section className="anime-related-container">
-              <div className="episodes-container">
-                <h2>Episodes</h2>
-                <div className="seasons-dropdown">
-                  <button onClick={toggleDropdown} className="dropdown-button">
-                    {selectedSeason} ▼
-                  </button>
-                  {isDropdownOpen && (
-                    <ul className="dropdown-menu">
-                      <li onClick={() => handleSeasonSelect("Season 1")}>
-                        Season 1
-                      </li>
-                      <li onClick={() => handleSeasonSelect("Season 2")}>
-                        Season 2
-                      </li>
-                      <li onClick={() => handleSeasonSelect("Season 3")}>
-                        Season 3
-                      </li>
-                    </ul>
-                  )}
-                </div>
-                <ul>
-                  <li>EP 1</li>
-                  <li>EP 2</li>
-                  <li>EP 3</li>
-                  <li>EP 4</li>
-                  <li>EP 5</li>
-                  <li>EP 6</li>
-                  <li>EP 7</li>
-                  <li>EP 8</li>
-                  <li>EP 9</li>
-                  <li>EP 10</li>
-                </ul>
-              </div>
               <div className="details-container">
-                <h2>Details Container</h2>
-                <div className="details-background">
-                  <p>
-                    This is the details background image. Changes depending on
-                    anime.{" "}
-                  </p>
-                </div>
                 <div className="details-content">
                   <div className="anime-poster">
-                    <p>Poster Image (Left)</p>
+                    <img src={anime.images.jpg.image_url} alt={anime.title} />
                   </div>
                   <div className="anime-about">
-                    <p>Anime Description (Right)</p>
+                    <h2>{anime.title}</h2>
+                    <div className="anime-synopsis">
+                      <p>{filteredSynopsis}</p>
+                    </div>
+                    <div className="anime-details">
+                      <strong className="anime-details-item">Rank:</strong>
+                      {anime.rank}
+                      <strong className="anime-details-item">Rating:</strong>
+                      {anime.score}
+                      <strong className="anime-details-item">Type:</strong>
+                      {anime.type}
+                      <strong className="anime-details-item">Episodes:</strong>
+                      {anime.episodes}
+                      <strong className="anime-details-item">Duration:</strong>
+                      {anime.duration}
+                      <strong className="anime-details-item">
+                        Genres:
+                      </strong>{" "}
+                      {anime.genres.map((genre) => genre.name).join(", ")}
+                    </div>
                   </div>
                 </div>
               </div>

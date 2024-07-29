@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .settings-page {
@@ -19,6 +20,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .content {
@@ -29,6 +31,8 @@ body {
   justify-content: center;
   padding: 15px;
   gap: 15px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 footer {
@@ -47,6 +51,10 @@ h1 {
   font-size: 31px;
 }
 
+.anime-synopsis {
+  white-space: pre-wrap;
+}
+
 .player-page {
   display: flex;
   flex-direction: column;
@@ -56,7 +64,9 @@ h1 {
 .video-container {
   text-align: center;
   padding: 15px;
-  margin: 20px 0;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 1080px;
 }
 
 .video-title,
@@ -71,14 +81,11 @@ h1 {
   width: 100%;
 }
 
-.episodes-container,
 .details-container {
   width: 100%;
-  margin-top: 20px;
-}
-
-.seasons-dropdown {
-  position: relative;
+  max-width: 1200px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .dropdown-button {
@@ -90,62 +97,45 @@ h1 {
   cursor: pointer;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-menu li {
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  color: black;
-  text-decoration: none;
-}
-
-.dropdown-menu li:hover {
-  background-color: #def2cf;
-  color: black;
-}
-
 .details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.details-background {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .details-content {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  width: 100%;
 }
 
 .anime-poster {
   margin-top: 10px;
   margin-right: 10px;
   width: 100%;
-  height: auto;
+  max-width: 300px;
 }
 
 .anime-about {
   margin-left: 10px;
   margin-right: 10px;
   width: 100%;
-  height: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.anime-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px;
+  gap: 10px;
+  width: 100%;
+}
+
+.anime-detail-item {
   text-align: center;
 }
