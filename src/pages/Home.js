@@ -23,27 +23,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="HomeNav">
-        <header className="HomeNav-header">
-          <div className="HomeNav-logo-text">
-            <img src={Dangologo} alt="Dango Logo" className="HomeNav-logo" />
-            <p className="HomeNav-text">DangoDot</p>
-          </div>
-          <nav>
-            <ul className="HomeNav-ul">
-              <li>Home</li>
-              <li>Watchlist</li>
-              <li>Settings</li>
-              <li>
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="search-bar"
-                />
-              </li>
-            </ul>
-          </nav>
-        </header>
+      <div>
         <main>
           <section>
             <h2>Top Anime</h2>
