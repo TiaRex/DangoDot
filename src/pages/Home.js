@@ -1,52 +1,33 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import '../styles/Home.css';
-import Dangologo from '../assets/Dangologo.png';
-import MyHeroAcademia from '../assets/myheroacad.jpeg';
-import FullmetalAlchemist from '../assets/Fmab.jpeg';
-import HunterxHunter from '../assets/hxh.jpeg';
-import JujustuKaisen from '../assets/Jujutsu-Kaisen.png';
-import Bleach from '../assets/bleach-cover.jpg';
-import AttackOnTitan from '../assets/aot.jpg';
-import OnePiece from '../assets/onep.jpg';
-import Naruto from '../assets/naruto-cover.jpg';
-import DemonSlayer from '../assets/demonslayer.jpeg';
-import DeathNote from '../assets/deathnote.jpg';
-
-// Sample data for the sections
-const popularMovies = [
-  { id: 1, title: "My Hero Academia", image: MyHeroAcademia},
-  { id: 2, title: "Fullmetal Alchemist", image: FullmetalAlchemist},
-  { id: 3, title: "Hunter X Hunter", image: HunterxHunter },
-  { id: 4, title: "Jujutsu Kaisen", image: JujustuKaisen},
-  { id: 5, title: "Bleach", image: Bleach },
-  { id: 6, title: "Attack on Titan", image: AttackOnTitan},
-  { id: 7, title: "One Piece", image: OnePiece },
-  { id: 8, title: "Naruto", image: Naruto },
-  { id: 9, title: "Demon Slayer", image: DemonSlayer },
-  { id: 10, title: "Death Note", image: DeathNote },
-];
-
-const continueWatching = [
-  { id: 1, title: "Bleach", image: Bleach },
-  { id: 2, title: "One Piece", image: OnePiece },
-  { id: 2, title: "Fullmetal Alchemist", image: FullmetalAlchemist },
-];
-
-const watchlist = [
-  { id: 1, title: "Naruto", image: Naruto },
-  { id: 2, title: "Demon Slayer", image: DemonSlayer },
-];
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "../styles/home.css";
+import Dangologo from "../assets/Dangologo.png";
 
 const Home = () => {
+  const [topAnimes, setTopAnimes] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("https://api.jikan.moe/v4/top/anime")
+      .then((response) => response.json())
+      .then((data) => setTopAnimes(data.data.slice(0, 10)))
+      .catch((error) => console.error("Error fetching top animes:", error));
+  }, []);
+
+  const handleAnimeClick = (anime) => {
+    navigate(`/player/${anime.mal_id}`, { state: { anime } });
+  };
+
   return (
     <>
       <Navbar />
       <div className="HomeNav">
         <header className="HomeNav-header">
           <div className="HomeNav-logo-text">
-          <img src={Dangologo} alt="Dango Logo" className="HomeNav-logo" />
-          <p className="HomeNav-text">DangoDot</p>
+            <img src={Dangologo} alt="Dango Logo" className="HomeNav-logo" />
+            <p className="HomeNav-text">DangoDot</p>
           </div>
           <nav>
             <ul className="HomeNav-ul">
@@ -54,63 +35,37 @@ const Home = () => {
               <li>Watchlist</li>
               <li>Settings</li>
               <li>
-                <input type="text" placeholder="Search..." className="search-bar"/>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="search-bar"
+                />
               </li>
             </ul>
           </nav>
         </header>
-
         <main>
           <section>
-            <h2>Popular Movies</h2>
-            <div className="movie-list">
-              {popularMovies.map(movie => (
-                <div key={movie.id} className="movie-item">
-                  <img className="movie-cover" src={movie.image} alt={movie.title} />
-                  <p>{movie.title}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2>Continue Watching</h2>
-            <div className="movie-list">
-              {continueWatching.map(movie => (
-                <div key={movie.id} className="movie-item">
-                  <img className="movie-cover" src={movie.image} alt={movie.title} />
-                  <p>{movie.title}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2>Watchlist</h2>
-            <div className="movie-list">
-              {watchlist.map(movie => (
-                <div key={movie.id} className="movie-item">
-                  <img className="movie-cover" src={movie.image} alt={movie.title} />
-                  <p>{movie.title}</p>
+            <h2>Top Anime</h2>
+            <div className="anime-list">
+              {topAnimes.map((anime) => (
+                <div key={anime.mal_id} className="anime-item">
+                  <img
+                    className="anime-cover"
+                    src={anime.images.jpg.image_url}
+                    alt={anime.title}
+                    onClick={() => handleAnimeClick(anime)}
+                  />
+                  <p>{anime.title}</p>
                 </div>
               ))}
             </div>
           </section>
         </main>
-
-        <footer>
-          <p>&copy; 2024 DangoDot Movie App</p>
-          <nav>
-            <ul>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-              <li>Contact Us</li>
-            </ul>
-          </nav>
-        </footer>
+        <Footer />
       </div>
     </>
   );
-}
+};
 
 export default Home;
