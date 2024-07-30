@@ -87,14 +87,16 @@ const Landing = () => {
         </div>
       </section>
       <section className="subfeaturecontent-wrapper">
+        
         <div className="subfeaturecontent">
           <h2 className="subfeatheading">Subscription Features</h2>
+          
           <div className="subfeaturedescriptions">
             
             <div className="subfeaturerow1">
               <div className="subfeaturebox1">
                 <img
-                  className="feature-one-icon"
+                  className="feature-icon-one"
                   loading="lazy"
                   alt="mini dangodot logo"
                   src={FeatureIcon}
@@ -135,21 +137,27 @@ const Landing = () => {
                   This is the body text for feature 3.
                   This is the body text for feature 3.
                 </div>
+
               </div>
               
               <div className="subfeaturebox4">
+
                 <img className="feature-icon-four" 
                       alt="mini dangodot logo" 
                       src={FeatureIcon} />
 
                 <div className="feature-4">Feature 4</div>
+
                 <div className="body-text-for3">
                 This is the body text for feature 4.
                 This is the body text for feature 4.
                 This is the body text for feature 4.
                 </div>
+
               </div>
+
             </div>
+
           </div>
         </div>
       </section>

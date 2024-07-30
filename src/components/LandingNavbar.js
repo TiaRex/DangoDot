@@ -17,15 +17,17 @@ const LandingNavbar = () => {
           <div className="dangodotlogobox-parent">
             <div className="dangodotlogobox"></div>
             <div className="dangologo-wrapper">
+              
               <img
                 className="dangologo-icon"
-                loading="lazy"
                 alt="DangoDot Logo Icon"
                 src={DangoDotLogo}
               />
+                <div className="dangodot">DangoDot</div>
             </div>
-            <div className="dangodot">DangoDot</div>
+           
           </div>
+
           <div className="loginsignupbutton-wrapper">
             <button className="loginsignupbutton" id="logInSignUpButton">
               <div className="loginsignup">Log-In/Sign-Up</div>

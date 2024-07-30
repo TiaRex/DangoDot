@@ -9,7 +9,7 @@ import TikTokIcon from "../assets/tiktokicon.png"
 
 const Footer = () => {
   return (
-    <footer>
+   
   <footer className="navigation-footer">
         <div className="divider"></div>
         <div className="footer-content">
@@ -84,7 +84,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-  </footer>
+ 
   );
 }
 
