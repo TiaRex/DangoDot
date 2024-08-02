@@ -1,8 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import Dangologo from '../assets/Dangologo.png';
 import '../styles/navbar.css';
 
 const Navbar = () => {
+  const isAuthenticated = !!localStorage.getItem('token');
+  
+
+  const logout = () => {
+    localStorage.removeItem('token'); // Remove the token from local storage
+    window.location.href= '/login'; // Redirect user to login-signup page once logged out
+  };
+  
+
   return (
     <div className="HomeNav">
     <header className="HomeNav-header">
@@ -18,6 +27,8 @@ const Navbar = () => {
         <li>
           <Link to="/login">Log-In/Sign-Up</Link>
         </li>
+        {isAuthenticated && (
+          <>
         <li>
           <Link to="/home">Home</Link>
         </li>
@@ -27,9 +38,14 @@ const Navbar = () => {
         <li>
           <Link to="/settings">Settings</Link>
         </li>
-        <button className="search-bar button">
+        <li>
+            <button onClick={logout} className="logout-button">Logout</button>
+         </li>
+        <li>
             <input type="text" placeholder="Search..." className="search-bar"/>
-        </button>
+        </li>
+        </>
+        )}
         </ul>
       </nav>
     </header>
