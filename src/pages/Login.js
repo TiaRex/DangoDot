@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import '../styles/Login.css';
 
 import user from '../assets/user.png';
@@ -11,9 +9,7 @@ const Login = () => {
   const [action, setAction] = useState('Sign Up');
 
   return (
-    <div>
-      <Navbar />
-      
+    <div className='login-container'>
       <div className='container'>
         <div className='header'>
           <div className='text'>{action}</div>
@@ -65,7 +61,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

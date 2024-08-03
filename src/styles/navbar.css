@@ -1,5 +1,7 @@
 .HomeNav {
+  /* height:5vh; */
   text-align: center;
+  background-color: #ffd9d3;
     }
     
     .HomeNav-header {
@@ -7,7 +9,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
-      background-color: #ffd9d3;
       color: #333;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
@@ -30,6 +31,14 @@
       font-weight: bold;
       color: #333;
       cursor: pointer;
+    }
+/* This changes the text appearance on the navbar. Added classNames to the links for styling */
+    .HomeText,
+    .WatchListText,
+    .SettingsText,
+    .LoginText {
+      text-decoration:none;
+      color:inherit;
     }
     
     .HomeNav-ul {

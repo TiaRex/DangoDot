@@ -1,4 +1,4 @@
-import '../styles/navbar.css';
+import '../styles/footer.css';
 // Navigation Footer Images
 import FacebookIcon from "../assets/facebookicon.svg"
 import RedditIcon from "../assets/redditicon.svg"

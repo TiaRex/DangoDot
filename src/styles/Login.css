@@ -1,8 +1,11 @@
-body {
+.body {
     height: 100vh;
-    background: #fffff1;
+    background: #def2cf;
     }
     
+    .login-container {
+    height: 76vh;
+    }
     .container {
     display: flex;
     flex-direction: column;
@@ -12,6 +15,7 @@ body {
     background: #c9958c;
     padding-bottom: 30px;
     margin-bottom: 100px;
+    border-radius:25px;
     }
     
     .header {
@@ -49,8 +53,8 @@ body {
         margin: auto;
         width: 480px;
         height: 80px;
-        background:  #ffd9d3;
-        border-radius: 6px;
+        background:  white;
+        border-radius: 8px;
     }
     
     .input img {
@@ -70,12 +74,13 @@ body {
     .forgot-password {
         padding-left: 62px;
         margin-top: 27px;
-        color: #797979;
+        color: #454545;
         font-size: 18px;
+        font-weight: 500;
     }
     
     .forgot-password span {
-        color: #95b47e;
+        color: #def2cf;
         cursor: pointer;
     }
     
@@ -93,7 +98,7 @@ body {
         height: 59px;
         color: white;
         background: #95b47e;
-        border-radius: 50px;
+        border-radius: 8px;
         font-size: 19px;
         font-weight: 700;
         cursor: pointer;
@@ -101,5 +106,6 @@ body {
     
     .gray {
         background: #EAEAEA;
-        color: #676767;
+        color: #454545;
+        border-radius: 8px;
     }

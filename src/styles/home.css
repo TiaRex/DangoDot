@@ -50,7 +50,10 @@
   border-radius: 4px;
 }
 
+/* Added height to push footer component down */
+
 main {
+  height: 80vh;
   padding: 20px;
   background: #fffff1;
 }
@@ -82,7 +85,8 @@ main {
   cursor: pointer;
 }
 
-footer {
+/* disabled footer style - styling exist on footer component css file*/
+/* footer {
   padding: 20px;
   background-color: #def2cf;
   color: black;
@@ -99,4 +103,4 @@ footer nav ul {
 
 footer nav ul li {
   cursor: pointer;
-}
+} */

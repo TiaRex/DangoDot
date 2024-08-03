@@ -1,6 +1,5 @@
+import { Link } from "react-router-dom";
 import React from 'react'
-import LandingNavbar from '../components/LandingNavbar';
-import Footer from '../components/Footer';
 import "../styles/Landing.css"
 // picture/images imports here
 // Update pictures by adding import and update src link under img
@@ -25,7 +24,6 @@ import FeatureIcon from "../assets/dangologo@2x.png"
 const Landing = () => {
   return (
   <>
-  <LandingNavbar></LandingNavbar>
     <div className="landing-page-body">
       <section className="landing-page-body-inner">
         <div className="feature-grid-parent">
@@ -36,21 +34,21 @@ const Landing = () => {
                 <div className="media-platform-for">
                   Media Platform for Anime Enthusiasts
                 </div>
-                <div className="button-wrapper">
+                  <div className="button-wrapper">
+                  <Link className = "logintext" to="/login">
                   <button className="button">
-                 
-                  <div className="trial-period">
-                      Start Your 30-Day Free Trial
+                  <div className="sign-up">
+                      Click Here to Sign Up Today
                     </div>
                   </button>
-                </div>
-                <div className="click-here-to">Click Here to See Plans</div>
+                  </Link>
+                  </div>
               </div>
             </div>
             <div className="sitefeaturecontent1-parent">
               <div className="sitefeaturecontent1">
                 <div className="heading-parent">
-                  <h2 className="heading">Heading</h2>
+                  <h2 className="heading">Binge-Worthy Anime Adventures Await!</h2>
                   <div className="a-subheading-for">
                     A subheading for this section, as long or as short as you
                     like
@@ -76,10 +74,10 @@ const Landing = () => {
 
             <div className="sitefeaturecontent2-wrapper">
               <div className="sitefeaturecontent2">
-                <h2 className="heading1">Heading</h2>
+                <h2 className="heading1">From Classics to New Releases: Dive into Anime Bliss</h2>
                 <div className="another-subheadingmaybe-its">
-                  Another subheading—maybe it’s related to the image on the
-                  left, or the button below
+                  Explore a vast anime library and dive into an extensive collection of series and movies, 
+                  from classics to the latest releases.
                 </div>
               </div>
             </div>
@@ -101,11 +99,9 @@ const Landing = () => {
                   alt="mini dangodot logo"
                   src={FeatureIcon}
                 />
-                <div className="feature-1">Feature 1</div>
+                <div className="feature-1">Your Own Personal Anime Queue</div>
                 <div className="body-text-for">
-                  This is the body text for feature 1.
-                  This is the body text for feature 1.
-                  This is the body text for feature 1.
+                  Curate your watchlist, save favorites, and never miss an episode!
                 </div>
               </div>
 
@@ -113,11 +109,9 @@ const Landing = () => {
                 <img className="feature-icon-two" 
                       alt="mini dangodot logo" 
                       src={FeatureIcon} />
-                <div className="feature-2">Feature 2</div>
+                <div className="feature-2">Weekly Spotlight</div>
                 <div className="body-text-for1">
-                  This is the body text for feature 2.
-                  This is the body text for feature 2.
-                  This is the body text for feature 2.
+                  Discover hidden gems and trending anime picks highlighted every week.
                 </div>
               </div>
             </div>
@@ -130,12 +124,10 @@ const Landing = () => {
                       src={FeatureIcon} />
                       
 
-                <div className="feature-3">Feature 3</div>
+                <div className="feature-3">Ad-Free Bliss</div>
 
                 <div className="body-text-for2">
-                  This is the body text for feature 3.
-                  This is the body text for feature 3.
-                  This is the body text for feature 3.
+                 Say goodbye to interruptions and immerse yourself streaming.
                 </div>
 
               </div>
@@ -146,12 +138,10 @@ const Landing = () => {
                       alt="mini dangodot logo" 
                       src={FeatureIcon} />
 
-                <div className="feature-4">Feature 4</div>
+                <div className="feature-4">Offline Viewing</div>
 
                 <div className="body-text-for3">
-                This is the body text for feature 4.
-                This is the body text for feature 4.
-                This is the body text for feature 4.
+                Download episodes and watch them offline anytime, anywhere.
                 </div>
 
               </div>
@@ -161,6 +151,8 @@ const Landing = () => {
           </div>
         </div>
       </section>
+      
+      {/* To add image Carousel here starting here*/}
       <section className="subplanssection">
         <div className="pickyourplansection">
           <div className="subplanheader">
@@ -258,10 +250,9 @@ const Landing = () => {
           </div>
         </div>
       </section>
-
+      {/* To add image Carousel here ending here*/}
+  
    {/* Navigation Footer Component */}
-   <Footer></Footer>
-
       {/* <footer className="navigation-footer">
         <div className="divider"></div>
         <div className="footer-content">

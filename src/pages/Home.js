@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import "../styles/home.css";
 import Dangologo from "../assets/Dangologo.png";
 
@@ -22,8 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <div>
+      <div className="home">
         <main>
           <section>
             <h2>Top Anime</h2>
@@ -42,8 +39,9 @@ const Home = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        
       </div>
+     
     </>
   );
 };

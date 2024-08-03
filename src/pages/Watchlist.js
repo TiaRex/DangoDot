@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
 import '../styles/Watchlist.css';
 import JujutsuKaisen from '../assets/Jujutsu-Kaisen.png';
 import DemonSlayer from '../assets/demonslayer.jpeg';
@@ -7,7 +6,6 @@ import DemonSlayer from '../assets/demonslayer.jpeg';
 const Watchlist = () => {
   return (
     <body>
-        <Navbar />
         <header>
             <div class="watchlist-container">
                 <h1 class="header-title">My Watchlists</h1>

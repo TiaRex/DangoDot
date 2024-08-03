@@ -19,6 +19,11 @@
   font-size: 30px;
   font-family: var(--small-text);
 }
+.landing-page-body {
+  max-width:2000px;
+  width: 100%;
+  margin: 0 auto;
+}
 .begin-your-anime {
   margin: 0;
   position: relative;
@@ -32,7 +37,7 @@
   position: relative;
   line-height: 150%;
 }
-.trial-period{
+.sign-up{
   position: relative;
   font-size: var(--small-text-size);
   line-height: 150%;
@@ -40,12 +45,15 @@
   font-family: var(--small-text);
   color: var(--color-white);
   text-align: left;
+  text-decoration:none;
 }
+
 .button,
 .button-wrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  text-decoration: none;
 }
 .button {
   cursor: pointer;
@@ -56,11 +64,23 @@
   border-radius: var(--br-5xs);
   justify-content: flex-start;
   white-space: nowrap;
+  
+}
+.button:hover {
+  background-color: #61824a;
+      color: #fff;
 }
 .button-wrapper {
   align-self: stretch;
   justify-content: center;
   padding: 0 var(--padding-xl);
+}
+
+/* To remove the underline on text due to hyperlink */
+/* Added font weight to add emphasis to Click Here to Sign Up Today */
+.logintext {
+  text-decoration:none;
+  font-weight: 500;
 }
 .click-here-to {
   align-self: stretch;
@@ -75,6 +95,8 @@
   justify-content: flex-start;
   gap: var(--gap-5xl);
   max-width: 100%;
+  padding: var(--padding-63xl) var(--padding-61xl) var(--padding-17xl)
+  var(--padding-xl);
 }
 .landingpageintro {
   align-self: stretch;

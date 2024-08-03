@@ -1,4 +1,4 @@
-/* footer {
+footer {
   padding: 20px;
   background-color: #def2cf;
   color: black;
@@ -15,7 +15,7 @@ footer nav ul {
 
 footer nav ul li {
   cursor: pointer;
-} */
+}
 
 
 .connect-with-us {
@@ -136,6 +136,7 @@ footer nav ul li {
   max-width: 100%;
   gap: var(--gap-xl);
 }
+.home,
 .landing-page-body,
 .navigation-footer {
   overflow: hidden;
@@ -145,6 +146,7 @@ footer nav ul li {
   justify-content: flex-start;
 }
 .navigation-footer {
+  height:15vh;
   align-self: stretch;
   background-color: var(--color-lightgoldenrodyellow);
   padding: var(--padding-12xs) 79px 87px var(--padding-61xl);

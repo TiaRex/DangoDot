@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
 import EditProfile from "../components/EditProfile";
 import UpdateAccount from "../components/UpdateAccount";
@@ -28,7 +26,7 @@ const Settings = () => {
 
   return (
     <div className="settings-page">
-      <Navbar />
+     
       <div className="wrapper">
         <Sidebar onContentChange={setContent} />
         <section className="content-container">
@@ -38,7 +36,7 @@ const Settings = () => {
           </div>
         </section>
       </div>
-      <Footer />
+  
     </div>
   );
 };
