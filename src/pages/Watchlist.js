@@ -10,7 +10,7 @@ const Watchlist = () => {
   const [animeData, setAnimeData] = useState()
 
   const getData = async() => {
-    const res=await fetch(`https://api.jikan.moe/v4/anime?q=${search}&limit=5`)
+    const res=await fetch(`https://api.jikan.moe/v4/anime?q=${search}&limit=10`)
     const resData= await res.json();
     setAnimeData(resData.data)
     console.log(resData.data)
@@ -37,7 +37,7 @@ const Watchlist = () => {
           {/* Search Results */}
           <section className="results-container" id="results-container">
             <div className="results-box">
-              <div className="results-cover">
+              <div className="results-row">
                 {
                   animeData ?(
                     animeData.map((anime,index)=> {

@@ -69,3 +69,17 @@ body{
   margin: 0px;
   width: 225px;
 }
+
+.results-row{
+  display: inline-flex;
+  gap:20px;
+}
+.results-card{
+  border-radius: 10px;
+  box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 10px 20px;
+  width: 225px;
+  height: 300px;
+}
