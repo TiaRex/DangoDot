@@ -44,10 +44,15 @@ const Watchlist = () => {
                       return (
                         <div className="results-card">
                           <img src={anime.images.jpg.large_image_url} alt="animeCover"></img>
-
-                          <div className="results-text">
-                            <h4>{anime.title}</h4>
+                          <h4>{anime.title}</h4>
+                          
+                          <div className="overlay">
+                            <div className="add">
+                              <button type="button">Add to List +</button>
+                            </div>
                           </div>
+
+
                         </div>
                       )
                     })
