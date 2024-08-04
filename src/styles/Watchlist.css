@@ -12,69 +12,12 @@ body{
   
 }
 
-.favorites-heading, .later-heading{
-  color: #1a1a1a;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding-left: 30px;
-}
-
-.favorites-box{
-  box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  margin: 0px 20px 10px 20px;
-  overflow: hidden;
-  width: 430px;
-  height: 250px;
-}
-.favorites-box img{
-  object-fit: cover;
-  object-position: top;
-  width: 100%;
-  height: 100%;
-}
-
-.later-box{
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  margin: 0px 20px 10px 20px;
-  overflow: hidden;
-  width: 225px;
-  height: 300px;
-}
-.later-box img{
+.favorites-box img, .results-box img{
   object-fit: cover;
   width: 100;
   height: 100%;
 }
-.later-text strong{
-  color:#3a3a3a;
-  margin: 0px;
-}
-.later-text{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  flex-direction: column;
-  margin: 20px;
-}
-.later-text p{
-  color: #979797;
-  margin: 0px;
-  width: 225px;
-}
-
-.results-row{
-  display: inline-flex;
-  gap:20px;
-}
-.results-card{
+.favorites-card, .results-card{
   box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
@@ -83,12 +26,18 @@ body{
   width: 225px;
   height: 300px;
 }
-.results-box img{
-  object-fit: cover;
-  width: 100;
-  height: 100%;
+.favorites-heading{
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-left: 30px;
 }
-
+.favorites-row, .results-row{
+  display: inline-flex;
+  gap:20px;
+}
 .results-card:hover .overlay{
   opacity: 1;
   height: 10%;
@@ -108,7 +57,7 @@ body{
 .overlay button{
   position: absolute;
   bottom: 10px;
-  right: 50px;
+  right: 25px;
   padding: 0.5rem;
   background-color: rgb(211,177,145);
   font-size: 1rem;

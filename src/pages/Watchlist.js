@@ -1,13 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
 import '../styles/Watchlist.css';
-import JujutsuKaisen from '../assets/Jujutsu-Kaisen.png';
-import DemonSlayer from '../assets/demonslayer.jpeg';
 import Footer from '../components/Footer';
 
 const Watchlist = () => {
   const [search, setSearch] = useState('Naruto')
   const [animeData, setAnimeData] = useState()
+  const [myAnimeList,setMyAnimeList]=useState([])
+
+  const addTo=(anime)=>{
+    const index=myAnimeList.findIndex((myanime)=>{
+        return myanime.mal_id === anime.mal_id
+    })
+    if(index < 0){
+      const newArray=[...myAnimeList,anime]
+      setMyAnimeList(newArray);
+    }
+  }
+
+  const removeFrom=(anime)=>{
+    const newArray=myAnimeList.filter((myanime)=>{
+      return myanime.mal_id !== anime.mal_id
+    })
+    setMyAnimeList(newArray)
+  }
 
   const getData = async() => {
     const res=await fetch(`https://api.jikan.moe/v4/anime?q=${search}&limit=10`)
@@ -25,7 +41,7 @@ const Watchlist = () => {
 
         <header>
             <div className="watchlist-container">
-                <h1 className="header-title">My Watchlists</h1>
+                <h1 className="header-title">Watchlist</h1>
                 <div className = "search-box">
                   <input type = "search" placeholder = "Search Anime"
                   onChange = {(e) => setSearch(e.target.value)}/>
@@ -46,13 +62,11 @@ const Watchlist = () => {
                           <img src={anime.images.jpg.large_image_url} alt="animeCover"></img>
                           <h4>{anime.title}</h4>
                           
-                          <div className="overlay">
+                          <div className="overlay" onClick={()=>addTo(anime)}>
                             <div className="add">
                               <button type="button">Add to List +</button>
                             </div>
                           </div>
-
-
                         </div>
                       )
                     })
@@ -64,25 +78,31 @@ const Watchlist = () => {
           <br></br>
 
           {/* Favorites */}
-          <section className="favorites-container" id="favorites-container">
+            <section className="results-container" id="results-container">
             <h1 className="favorites-heading">Favorites</h1>
-            <div className="favorites-box">
-              <img src={JujutsuKaisen} alt="Jujutsu-Kaisen"></img>
+            <div className="results-box">
+              <div className="results-row">
+                {
+                  myAnimeList.length !== 0 ?(
+                    myAnimeList.map((anime,index)=> {
+                      return (
+                        <div className="results-card">
+                          <img src={anime.images.jpg.large_image_url} alt="animeCover"></img>
+                          <h4>{anime.title}</h4>
+                          
+                          <div className="overlay" onClick={()=>removeFrom(anime)}>
+                            <div className="remove">
+                              <button type="button">Remove from List -</button>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  ) : "Search and add anime to your favorites!"
+                }
+              </div>
             </div>
-          </section>
-          <br></br>
-          
-          {/* Watch Later */}
-          <section className="later-container" id="later-container">
-            <h1 className="later-heading">Watch Later</h1>
-            <div className="later-box">
-              <img src={DemonSlayer} alt="Demon Slayer"></img>
-            </div>
-            <div className="later-text">
-              <strong>Demon Slayer</strong>
-              <p>2023 | 4 Seasons</p>
-              <p>Shonen Manga, Action Manga, Dark Fantasy</p>
-            </div>
+
           </section>
           <br></br>
         </main>
