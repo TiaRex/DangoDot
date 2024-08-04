@@ -817,9 +817,9 @@
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 56px 58px 61px;
+  padding: 56px 58px 56px;
   box-sizing: border-box;
-  gap: 61px;
+  gap: 100px;
 }
 .divider,
 .subplanssection {
@@ -831,7 +831,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 0 251px;
+  padding: 20 20 251px;
   max-width: 100%;
   text-align: center;
   font-size: var(--heading-size);

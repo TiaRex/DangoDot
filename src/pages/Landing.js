@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react'
+import ImageCarousel from "../components/ImageCarousel";
 import "../styles/Landing.css"
 // picture/images imports here
 // Update pictures by adding import and update src link under img
@@ -153,9 +154,14 @@ const Landing = () => {
       </section>
       
       {/* To add image Carousel here starting here*/}
+      
       <section className="subplanssection">
-        <div className="pickyourplansection">
-          <div className="subplanheader">
+        <div className="animeimagecarousel">
+
+        <ImageCarousel></ImageCarousel>
+
+
+          {/* <div className="subplanheader">
             <div className="pick-your-plan-parent">
               <h2 className="pick-your-plan">Pick Your Plan</h2>
               <div className="subscription-options-for">
@@ -247,10 +253,11 @@ const Landing = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* To add image Carousel here ending here*/}
+      
   
    {/* Navigation Footer Component */}
       {/* <footer className="navigation-footer">

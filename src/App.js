@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -8,6 +9,7 @@ import Player from "./pages/Player";
 import Settings from "./pages/Settings";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
 
 function App() {
   return (

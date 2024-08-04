@@ -1,0 +1,16 @@
+/* Carousel.css */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust this value to your needs */
+  }
+  
+  .carousel {
+    width: 90%; /* Adjust this value to your needs */
+  }
+
+  .carousel.caption {
+    background-color:black;
+
+  }

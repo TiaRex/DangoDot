@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/footer.css';
 // Navigation Footer Images
 import FacebookIcon from "../assets/facebookicon.svg"
