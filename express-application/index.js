@@ -5,10 +5,8 @@ const app = express();
 const port = 3500;
 const mongoose = require('mongoose');
 const database_url = process.env.database_url;
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const usermodel = require('./schema/user');
-const { TokenAuthentication } = require('./middleware/TokenAuthentication');
 
 
 mongoose.connect(database_url, {
@@ -31,9 +29,8 @@ app.post('/register', async (req, res) => {
         const {name, email, password, displayname} = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = new usermodel({name, email, password: hashedPassword, displayname});
-        const saveduser = await user.save();
-        const token = jwt.sign ({userid: saveduser._id}, process.env.JWT_SECRET);
-        res.status(200).json({data: token});
+        await user.save();
+        res.status(200).json({userid: user._id});
     }
     catch(error){
     res.status(500).json({error: error.message});
@@ -53,8 +50,7 @@ app.post('/login', async (req, res) => {
         if (!isPasswordValid) {
             return res.status(400).json({message: 'Invalid password'});
         }
-        const token = jwt.sign({userid: user._id}, process.env.JWT_SECRET);
-        res.status(200).json({data: token});
+        res.status(200).json({userid: user._id});
     }
     catch(error){
         res.status(500).json({error: error.message});
