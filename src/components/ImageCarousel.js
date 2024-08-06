@@ -1,5 +1,6 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import '../styles/imagecarousel.css';
 import ImageCarouselPic1 from  "../assets/DemonSlayerHashiraArc.jpg";
 import ImageCarouselPic2 from  "../assets/KaijuNo8.jpg";
 import ImageCarouselPic3 from  "../assets/MyHeroAcademia.jpg";
@@ -16,8 +17,8 @@ function ImageCarousel() {
             alt="First slide" 
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Demon Slayer</h3>
+              <p>Hashira Act (Season 4) has finished. Binge watch today!</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -27,8 +28,8 @@ function ImageCarousel() {
             alt="Second slide" 
             />
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Kaiiju No. 8</h3>
+              <p>One of the most popular animes of the year! Available to steam now!</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -38,9 +39,9 @@ function ImageCarousel() {
             alt="Third slide" 
             />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
+              <h3>My Hero Academia</h3>
               <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Season 7 is out now. Stream today!
               </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -51,8 +52,8 @@ function ImageCarousel() {
             alt="Fourth slide" 
             />
             <Carousel.Caption>
-              <h3>Fourth slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Solo Leveling</h3>
+              <p>Season Two expected to be released in Fall 2024</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel></div>
