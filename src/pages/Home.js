@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
-import Dangologo from "../assets/Dangologo.png";
 
 const Home = () => {
   const [topAnimes, setTopAnimes] = useState([]);

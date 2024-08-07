@@ -1,41 +1,111 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Navbar from '../components/Navbar';
 import '../styles/Watchlist.css';
-import JujutsuKaisen from '../assets/Jujutsu-Kaisen.png';
-import DemonSlayer from '../assets/demonslayer.jpeg';
+import Footer from '../components/Footer';
 
 const Watchlist = () => {
+  const [search, setSearch] = useState('Naruto')
+  const [animeData, setAnimeData] = useState()
+  const [myAnimeList,setMyAnimeList]=useState([])
+
+  const addTo=(anime)=>{
+    const index=myAnimeList.findIndex((myanime)=>{
+        return myanime.mal_id === anime.mal_id
+    })
+    if(index < 0){
+      const newArray=[...myAnimeList,anime]
+      setMyAnimeList(newArray);
+    }
+  }
+
+  const removeFrom=(anime)=>{
+    const newArray=myAnimeList.filter((myanime)=>{
+      return myanime.mal_id !== anime.mal_id
+    })
+    setMyAnimeList(newArray)
+  }
+
+  const getData = async() => {
+    const res=await fetch(`https://api.jikan.moe/v4/anime?q=${search}&limit=10`)
+    const resData= await res.json();
+    setAnimeData(resData.data)
+    console.log(resData.data)
+  }
+  useEffect(()=>{
+    getData()
+  },[search])
+
   return (
     <body>
         <header>
-            <div class="watchlist-container">
-                <h1 class="header-title">My Watchlists</h1>
+            <div className="watchlist-container">
+                <h1 className="header-title">Watchlist</h1>
+                <div className = "search-box">
+                  <input type = "search" placeholder = "Search Anime"
+                  onChange = {(e) => setSearch(e.target.value)}/>
+                </div>
             </div>
         </header>
 
         <main>
-          {/* Favorites */}
-          <section class="favorites-container" id="favorites-container">
-            <h1 class="favorites-heading">Favorites</h1>
-            <div class="favorites-box">
-              <img src={JujutsuKaisen} alt="Jujutsu-Kaisen"></img>
+          {/* Search Results */}
+          <section className="results-container" id="results-container">
+            <div className="results-box">
+              <div className="results-row">
+                {
+                  animeData ?(
+                    animeData.map((anime,index)=> {
+                      return (
+                        <div className="results-card">
+                          <img src={anime.images.jpg.large_image_url} alt="animeCover"></img>
+                          <h4>{anime.title}</h4>
+                          
+                          <div className="overlay" onClick={()=>addTo(anime)}>
+                            <div className="add">
+                              <button type="button">Add to List +</button>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  ) : "Not Found"
+                }
+              </div>
             </div>
           </section>
           <br></br>
-          
-          {/* Watch Later */}
-          <section class="later-container" id="later-container">
-            <h1 class="later-heading">Watch Later</h1>
-            <div class="later-box">
-              <img src={DemonSlayer} alt="Demon Slayer"></img>
+
+          {/* Favorites */}
+            <section className="results-container" id="results-container">
+            <h1 className="favorites-heading">Favorites</h1>
+            <div className="results-box">
+              <div className="results-row">
+                {
+                  myAnimeList.length !== 0 ?(
+                    myAnimeList.map((anime,index)=> {
+                      return (
+                        <div className="results-card">
+                          <img src={anime.images.jpg.large_image_url} alt="animeCover"></img>
+                          <h4>{anime.title}</h4>
+                          
+                          <div className="overlay" onClick={()=>removeFrom(anime)}>
+                            <div className="remove">
+                              <button type="button">Remove from List -</button>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  ) : "Search and add anime to your favorites!"
+                }
+              </div>
             </div>
-            <div class="later-text">
-              <strong>Demon Slayer</strong>
-              <p>2023 | 4 Seasons</p>
-              <p>Shonen Manga, Action Manga, Dark Fantasy</p>
-            </div>
+
           </section>
           <br></br>
         </main>
+
+        <Footer />
     </body>
   )
 }
