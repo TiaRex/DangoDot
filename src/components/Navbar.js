@@ -27,6 +27,7 @@ const Navbar = () => {
         <li>
           <Link to="/login">Log-In/Sign-Up</Link>
         </li>
+
         {isAuthenticated && (
           <>
         <li>
@@ -41,9 +42,6 @@ const Navbar = () => {
         <li>
             <button onClick={logout} className="logout-button">Logout</button>
          </li>
-        <li>
-            <input type="text" placeholder="Search..." className="search-bar"/>
-        </li>
         </>
         )}
         </ul>

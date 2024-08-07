@@ -60,21 +60,3 @@
   color: #7f9866;
 }
 
-.search-bar {
-  padding: 10px;
-  border: 1px solid #95b47e;
-  background-color: #95b47e96;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.search-bar input {
-  border: none;
-  outline: none;
-  padding: 5px;
-}
-
-.search-bar input::placeholder {
-  color: white;
-}

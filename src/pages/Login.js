@@ -24,10 +24,10 @@ const Login = () => {
       ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, currentAction) => {
     e.preventDefault();
     try {
-      if (action === 'Sign Up') {
+      if (currentAction === 'Sign Up') {
         const response = await axios.post('http://localhost:3500/register', {
           name: formData.name,
           email: formData.email,
@@ -107,25 +107,19 @@ const Login = () => {
           <button
             type='button'
             className={action === "Login" ? "submit gray" : "submit"}
-            onClick={() => setAction("Sign Up")}
+            onClick={(e) => {setAction("Sign Up");
+            handleSubmit(e, "Sign Up")}}
           >
             Sign Up
           </button>
           <button
             type='button'
             className={action === "Sign Up" ? "submit gray" : "submit"}
-            onClick={() => setAction("Login")}
+            onClick={(e) => {setAction("Login");
+            handleSubmit(e, "Login")}}
           >
             Login
           </button>
-          <button
-              type='submit'
-              className='submit'
-            >
-              {action}
-              Submit
-            </button>
-        
         </div>
       </form>
       </div>
