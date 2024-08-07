@@ -153,7 +153,7 @@ const Landing = () => {
         </div>
       </section>
       
-      {/* To add image Carousel here starting here*/}
+      {/* To add image Carousel starting here*/}
       
       <section className="subplanssection">
         <div className="animeimagecarousel">
