@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+/* eliminates the underline that was under DangoDot due to linking */
+.no-underline {
+  text-decoration: none;
+}
+
 .HomeNav-logo {
   height: 40px;
   margin-right: 10px;

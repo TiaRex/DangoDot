@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
 import axios from 'axios';
 import '../styles/Login.css';
 import { useNavigate } from "react-router-dom";
@@ -9,7 +7,7 @@ import user from '../assets/user.png';
 import email from '../assets/email.png';
 import password from '../assets/password.png';
 
-const Login = () => {
+const Login = ({setIsAuthenticated}) => {
   const navigate= useNavigate();
   const [action, setAction] = useState('Sign Up');
   const [formData, setFormData] = useState({
@@ -34,6 +32,7 @@ const Login = () => {
           password: formData.password
         });
         localStorage.setItem('token', response.data.data);
+        setIsAuthenticated(true);
         navigate('/home');
       } else {
         const response = await axios.post('http://localhost:3500/login', {
@@ -41,6 +40,7 @@ const Login = () => {
           password: formData.password
         });
         localStorage.setItem('token', response.data.data);
+        setIsAuthenticated(true);
         navigate('/home');
       }
     } catch (error) {
