@@ -1,40 +1,32 @@
+import { Link } from "react-router-dom";
 import React from 'react'
-import Navbar from '../components/Navbar';
+import ImageCarousel from "../components/ImageCarousel";
 import "../styles/Landing.css"
-
 // picture/images imports here
 // Update pictures by adding import and update src link under img
-import DangoDotLogo from "../assets/dangologo@2x.png"
+
+// Landing Page Body Images
 import LandingPic1 from "../assets/landingpagepic1@2x.png"
 import LandingPic2 from "../assets/landingpagepic2@2x.png"
 import DisappearingDangos from "../assets/DisappearingDangos.png"
+
+// Subscription Feature Image
+import FeatureIcon from "../assets/dangologo@2x.png"
+
+// Navigation Footer Images
+// import FacebookIcon from "../assets/facebookicon.svg"
+// import RedditIcon from "../assets/redditicon.svg"
+// import YouTubeIcon from "../assets/youtubeicon.svg"
+// import InstagramIcon from "../assets/instagramicon.svg"
+// import XIcon from "../assets/xicon.png"
+// import TikTokIcon from "../assets/tiktokicon.png"
 
 // copy and past html code within return
 const Landing = () => {
   return (
   <>
-  <Navbar></Navbar>
-    <div className="landing-page-liz">
-      <header className="navigationheader">
-        <div className="dangodotlogobox-parent">
-          <div className="dangodotlogobox"></div>
-          <div className="dangologo-wrapper">
-            <img
-              className="dangologo-icon"
-              loading="lazy"
-              alt="DangoDot Logo Icon"
-              src={DangoDotLogo}
-            />
-          </div>
-          <div className="dangodot">DangoDot</div>
-        </div>
-        <div className="loginsignupbutton-wrapper">
-          <button className="loginsignupbutton" id="logInSignUpButton">
-            <div className="loginsignup">Log-In/Sign-Up</div>
-          </button>
-        </div>
-      </header>
-      <section className="landing-page-liz-inner">
+    <div className="landing-page-body">
+      <section className="landing-page-body-inner">
         <div className="feature-grid-parent">
           <div className="feature-grid">
             <div className="landingpageintro">
@@ -43,20 +35,21 @@ const Landing = () => {
                 <div className="media-platform-for">
                   Media Platform for Anime Enthusiasts
                 </div>
-                <div className="button-wrapper">
+                  <div className="button-wrapper">
+                  <Link className = "logintext" to="/login">
                   <button className="button">
-                    <div className="start-your-30-day">
-                      Start Your 30-Day Free Trial
+                  <div className="sign-up">
+                      Click Here to Sign Up Today
                     </div>
                   </button>
-                </div>
-                <div className="click-here-to">Click Here to See Plans</div>
+                  </Link>
+                  </div>
               </div>
             </div>
             <div className="sitefeaturecontent1-parent">
               <div className="sitefeaturecontent1">
                 <div className="heading-parent">
-                  <h2 className="heading">Heading</h2>
+                  <h2 className="heading">Binge-Worthy Anime Adventures Await!</h2>
                   <div className="a-subheading-for">
                     A subheading for this section, as long or as short as you
                     like
@@ -82,10 +75,10 @@ const Landing = () => {
 
             <div className="sitefeaturecontent2-wrapper">
               <div className="sitefeaturecontent2">
-                <h2 className="heading1">Heading</h2>
+                <h2 className="heading1">From Classics to New Releases: Dive into Anime Bliss</h2>
                 <div className="another-subheadingmaybe-its">
-                  Another subheading—maybe it’s related to the image on the
-                  left, or the button below
+                  Explore a vast anime library and dive into an extensive collection of series and movies, 
+                  from classics to the latest releases.
                 </div>
               </div>
             </div>
@@ -93,60 +86,82 @@ const Landing = () => {
         </div>
       </section>
       <section className="subfeaturecontent-wrapper">
+        
         <div className="subfeaturecontent">
           <h2 className="subfeatheading">Subscription Features</h2>
+          
           <div className="subfeaturedescriptions">
+            
             <div className="subfeaturerow1">
               <div className="subfeaturebox1">
                 <img
                   className="feature-icon-one"
                   loading="lazy"
-                  alt=""
-                  src="./public/00.svg"
+                  alt="mini dangodot logo"
+                  src={FeatureIcon}
                 />
-
-                <div className="feature-1">Feature 1</div>
+                <div className="feature-1">Your Own Personal Anime Queue</div>
                 <div className="body-text-for">
-                  Body text for whatever you’d like to say. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
+                  Curate your watchlist, save favorites, and never miss an episode!
                 </div>
               </div>
+
               <div className="subfeaturebox2">
-                <img className="feature-icon-two" alt="" src="./public/00-1.svg" />
-                <div className="feature-3">Feature 3</div>
+                <img className="feature-icon-two" 
+                      alt="mini dangodot logo" 
+                      src={FeatureIcon} />
+                <div className="feature-2">Weekly Spotlight</div>
                 <div className="body-text-for1">
-                  Body text for whatever you’d like to suggest. Add main
-                  takeaway points, quotes, anecdotes, or even a very very short
-                  story.
+                  Discover hidden gems and trending anime picks highlighted every week.
                 </div>
               </div>
             </div>
+
             <div className="subfeaturerow2">
-              <div className="parent">
-                <img className="icon" alt="" src="./public/00-2.svg" />
+              <div className="subfeaturebox3">
 
-                <div className="feature-2">Feature 2</div>
+                <img className="feature-icon-three" 
+                      alt="mini dangodot logo" 
+                      src={FeatureIcon} />
+                      
+
+                <div className="feature-3">Ad-Free Bliss</div>
+
                 <div className="body-text-for2">
-                  Body text for whatever you’d like to claim. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
+                 Say goodbye to interruptions and immerse yourself streaming.
                 </div>
-              </div>
-              <div className="group">
-                <img className="icon1" alt="" src="./public/00-3.svg" />
 
-                <div className="feature-4">Feature 4</div>
-                <div className="body-text-for3">
-                  Body text for whatever you’d like to type. Add main takeaway
-                  points, quotes, anecdotes, or even a very very short story.
-                </div>
               </div>
+              
+              <div className="subfeaturebox4">
+
+                <img className="feature-icon-four" 
+                      alt="mini dangodot logo" 
+                      src={FeatureIcon} />
+
+                <div className="feature-4">Offline Viewing</div>
+
+                <div className="body-text-for3">
+                Download episodes and watch them offline anytime, anywhere.
+                </div>
+
+              </div>
+
             </div>
+
           </div>
         </div>
       </section>
+      
+      {/* To add image Carousel starting here*/}
+      
       <section className="subplanssection">
-        <div className="pickyourplansection">
-          <div className="subplanheader">
+        <div className="animeimagecarousel">
+
+        <ImageCarousel></ImageCarousel>
+
+
+          {/* <div className="subplanheader">
             <div className="pick-your-plan-parent">
               <h2 className="pick-your-plan">Pick Your Plan</h2>
               <div className="subscription-options-for">
@@ -238,59 +253,65 @@ const Landing = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
-
-   {/* Navigation Footer Section */}
-      <footer className="navigation-footer">
+      {/* To add image Carousel here ending here*/}
+      
+  
+   {/* Navigation Footer Component */}
+      {/* <footer className="navigation-footer">
         <div className="divider"></div>
         <div className="footer-content">
           <div className="social">
             <div className="connect-with-us">Connect With Us</div>
+            
             <div className="social-icons">
               <img
-                className="mdifacebook-icon"
+                className="facebook-icon"
                 loading="lazy"
                 alt="Facebook Logo Icon"
-                src="./public/mdifacebook.svg"
+                src={FacebookIcon}
               />
 
               <img
-                className="mdireddit-icon"
+                className="reddit-icon"
                 loading="lazy"
                 alt="Reddit Logo Icon"
-                src="./public/mdireddit.svg"
+                src={RedditIcon}
               />
 
               <img
-                className="biyoutube-icon"
+                className="youtube-icon"
                 loading="lazy"
                 alt="YouTube Logo Icon"
-                src="./public/biyoutube.svg"
+                src={YouTubeIcon}
               />
 
               <img
-                className="riinstagram-fill-icon"
+                className="instagram-icon"
                 loading="lazy"
                 alt="Instagram Logo Icon"
-                src="./public/riinstagramfill.svg"
+                src={InstagramIcon}
               />
 
               <img
-                className="primetwitter-icon"
+                className="X-icon"
                 loading="lazy"
-                alt="Twitter Logo Icon"
-                src="./public/primetwitter@2x.png"
+                alt="X Logo Icon"
+                src={XIcon}
               />
 
               <img
-                className="icon-park-twotonetiktok"
+                className="tik-tok-icon"
                 loading="lazy"
                 alt="Tik-tok Logo Icon"
-                src="./public/iconparktwotonetiktok@2x.png"
+                src={TikTokIcon}
               />
             </div>
+
+            <div className="dangodot-copyright"> &copy; 2024 DangoDot Anime App</div>
+
           </div>
           <div className="footer-links">
             <div className="link-list-parent">
@@ -312,7 +333,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
       </>
 )}

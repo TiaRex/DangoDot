@@ -12,6 +12,7 @@ code {
     monospace;
 }
 /* added Global.CSS file here */
+/* Use this CSS file to reference for styling */
 
 body {
   margin: 0;
@@ -34,7 +35,7 @@ body {
   /* Colors */
   --color-lightgoldenrodyellow: #def2cf;
   --color-darkslategray: #454545;
-  --color-black: #000;
+  --color-black: #000000;
   --color-mistyrose: #ffd9d3;
   --color-darkseagreen: #95b47e;
   --color-darkolivegreen: #61824a;

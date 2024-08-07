@@ -37,8 +37,6 @@ const Watchlist = () => {
 
   return (
     <body>
-        <Navbar />
-
         <header>
             <div className="watchlist-container">
                 <h1 className="header-title">Watchlist</h1>

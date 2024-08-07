@@ -1,0 +1,31 @@
+/* Container for the carousel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  /* Adjust the carousel to fit within the container */
+  .carousel {
+    width: 100%; /* Adjust as needed */
+  }
+  
+  /* Style for the carousel images */
+  .carousel img {
+    width: 100%;
+    height: auto;
+    max-height: 30vh; /* Ensures the height is consistent */
+  }
+  
+  /* Style for the carousel captions */
+  .carousel-caption {
+    background-color: #303030;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.75;
+    height: 10vh;
+    width:75%;
+    font-size: 30px;
+  }

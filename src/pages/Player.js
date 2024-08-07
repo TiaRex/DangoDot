@@ -1,7 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import "../styles/player.css";
 
 const Player = () => {
@@ -18,7 +16,6 @@ const Player = () => {
 
   return (
     <div className="player-page">
-      <Navbar />
       <div className="wrapper">
         <section className="content-container">
           <div className="content">
@@ -83,7 +80,6 @@ const Player = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 };
